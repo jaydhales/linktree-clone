@@ -18,7 +18,7 @@ const Main = () => {
     {
       id: "book__python",
       text: "Python Books",
-      href: "http://books.zuri.team/python-for-beginners?ref_id=",
+      href: "http://books.zuri.team/python-for-beginners?ref_id=james-o",
     },
     {
       id: "pitch",
