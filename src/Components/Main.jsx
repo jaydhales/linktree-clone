@@ -1,5 +1,5 @@
 const Main = () => {
-  const links = [
+  const linkData = [
     {
       id: "btn__twitter",
       text: "Twitter Link",
@@ -31,7 +31,15 @@ const Main = () => {
       href: "https://books.zuri.team/design-rules",
     },
   ];
-  return <section></section>;
+  return (
+    <section>
+      {linkData.map(({ id, text, href }) => (
+        <a href={href} id={id} className="btn">
+          {text}
+        </a>
+      ))}
+    </section>
+  );
 };
 
 export default Main;
