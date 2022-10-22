@@ -33,8 +33,39 @@ section {
   text-align: center;
 }
 
+.other-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+footer {
+  padding: 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+footer p {
+  color: #667085;
+  text-align: center;
+}
+
+footer img {
+  width: 200px;
+}
+
 @media (min-width: 700px) {
   .btn {
     width: 50vw;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 }

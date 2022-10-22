@@ -1,3 +1,6 @@
+import slackIcon from "../assets/slack.svg";
+import githubIcon from "../assets/github.svg";
+
 const Main = () => {
   const linkData = [
     {
@@ -38,6 +41,10 @@ const Main = () => {
           {text}
         </a>
       ))}
+      <div className="other-links">
+        <img src={slackIcon} alt="Slack Icon" />
+        <img src={githubIcon} alt="Github Icon" />
+      </div>
     </section>
   );
 };
