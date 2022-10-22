@@ -37,7 +37,7 @@ const Main = () => {
   return (
     <section>
       {linkData.map(({ id, text, href }) => (
-        <a href={href} id={id} className="btn">
+        <a href={href} target="_blank" id={id} className="btn">
           {text}
         </a>
       ))}
