@@ -36,7 +36,7 @@ section {
 }
 
 .profile:hover .cam-icon {
-  margin-top: 56px;
+  opacity: 1;
 }
 
 .profile:active {
@@ -51,8 +51,9 @@ section {
 }
 
 .cam-icon {
-  margin-top: 100px;
-  transition: margin ease 0.2s;
+  opacity: 0;
+  transition: opacity ease 0.5s;
+  margin-top: 56px;
 }
 
 .more {
