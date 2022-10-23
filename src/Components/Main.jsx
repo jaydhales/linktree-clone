@@ -37,13 +37,18 @@ const Main = () => {
   return (
     <section>
       {linkData.map(({ id, text, href }) => (
-        <a href={href} target="_blank" id={id} className="btn">
+        <a key={text} href={href} target="_blank" id={id} className="btn">
           {text}
         </a>
       ))}
+
       <div className="other-links">
-        <img src={slackIcon} alt="Slack Icon" />
-        <img src={githubIcon} alt="Github Icon" />
+        <a href="http://" target="_blank">
+          <img src={slackIcon} alt="Slack Icon" />
+        </a>
+        <a href="http://" target="_blank">
+          <img src={githubIcon} alt="Github Icon" />
+        </a>
       </div>
     </section>
   );

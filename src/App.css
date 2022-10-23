@@ -2,11 +2,6 @@
   display: none;
 }
 
-#profile__img {
-  width: 88px;
-  border-radius: 50%;
-}
-
 body {
   padding: 1rem;
 }
@@ -15,8 +10,10 @@ header {
   display: grid;
   place-content: center;
   text-align: center;
-  margin: 2rem;
+  margin: 2rem auto;
   gap: 1rem;
+  position: relative;
+  max-width: 500px;
 }
 
 section {
@@ -25,24 +22,122 @@ section {
   gap: 1.5rem;
 }
 
+.profile {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.5s;
+}
+
+.profile:hover {
+  background: #344054a6;
+}
+
+.profile:hover .cam-icon {
+  margin-top: 56px;
+}
+
+.profile:active {
+  box-shadow: 0 0 0 5px #ebe9fe;
+}
+
+#profile__img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+
+.cam-icon {
+  margin-top: 100px;
+  transition: margin ease 0.2s;
+}
+
+.more {
+  position: absolute;
+  right: 0;
+  top: -1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.more img {
+  box-sizing: content-box;
+  background: #ffffff;
+  padding: 11px;
+  width: 16px;
+  height: 16px;
+  border: 1px dashed #d0d5dd;
+  border-radius: 50%;
+}
+
+.share_btn {
+  display: none;
+}
+
+.more img:hover {
+  box-shadow: 0px 0px 0px 4px #f2f4f7;
+}
+
+.tooltip {
+  background: #101828;
+  padding: 0.5rem 0.75rem;
+  color: #fff;
+  border-radius: 8px;
+  position: relative;
+}
+
+.tooltip::after {
+  background: #101828;
+  content: "";
+  border-radius: 1px;
+  transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: -5px;
+  top: 12px;
+}
+
 .btn {
   background: #eaecf0;
   filter: drop-shadow(0px 1px 2px rgba(16, 24, 40, 0.05));
   padding: 1.5rem;
   width: 90vw;
   text-align: center;
+  border-radius: 8px;
+  transition: background 0.5s;
+}
+
+.btn:focus {
+  background: #eaecf0;
+  border: 1px solid #98a2b3;
+}
+.btn:hover {
+  background: #d0d5dd;
 }
 
 .other-links {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
 }
 
+.other-links a {
+  transition: all 0.5s;
+}
+
+.other-links a:hover {
+  transform: scale(1.1);
+}
+
 footer {
   padding: 3rem 5rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -63,7 +158,20 @@ footer img {
     width: 50vw;
   }
 
+  .share_btn {
+    display: block;
+  }
+
+  .more_btn {
+    display: none;
+  }
+
+  .other-links {
+    display: flex;
+  }
+
   footer {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
