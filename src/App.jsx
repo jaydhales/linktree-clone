@@ -3,7 +3,7 @@ import Home from "./Routes/Home";
 import Contact from "./Routes/Contact";
 import Footer from "./Components/Footer";
 
-import "./App.css";
+import "./styles/App.css";
 
 function App() {
   const name = "james-o";
