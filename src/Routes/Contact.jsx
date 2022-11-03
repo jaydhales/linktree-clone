@@ -1,4 +1,4 @@
-import React from "react";
+import "../styles/Contact.css";
 
 const Contact = ({ name }) => {
   return (
@@ -53,7 +53,13 @@ const Contact = ({ name }) => {
         <p>You agree to providing your data to {name} who may contact you.</p>
       </div>
 
-      <input type="submit" value="Send message" id="btn_submit" />
+      <input
+        type="submit"
+        value="Send message"
+        id="btn_submit"
+        className="input"
+        disabled
+      />
     </form>
   );
 };
