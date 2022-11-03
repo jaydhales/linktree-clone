@@ -2,10 +2,6 @@
   display: none;
 }
 
-body {
-  padding: 1rem;
-}
-
 header {
   display: grid;
   place-content: center;
