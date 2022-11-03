@@ -1,13 +1,11 @@
-import Header from "../Components/Header";
+import Profile from "../Components/Profile";
 import Main from "../Components/Main";
-import Footer from "../Components/Footer";
 
 const Home = () => {
   return (
     <div className="App">
-      <Header />
+      <Profile />
       <Main />
-      <Footer />
     </div>
   );
 };
