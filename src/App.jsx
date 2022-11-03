@@ -4,10 +4,9 @@ import Contact from "./Routes/Contact";
 import Footer from "./Components/Footer";
 
 import "./App.css";
-import { useState } from "react";
 
 function App() {
-  const name = useState("james-o");
+  const name = "james-o";
   return (
     <div className="App">
       <Routes>
