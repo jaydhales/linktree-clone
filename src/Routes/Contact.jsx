@@ -58,7 +58,6 @@ const Contact = ({ name }) => {
         value="Send message"
         id="btn_submit"
         className="input"
-        disabled
       />
     </form>
   );
