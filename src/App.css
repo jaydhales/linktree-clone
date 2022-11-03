@@ -122,7 +122,8 @@ section {
 }
 
 .other-links {
-  display: none;
+  display: flex;
+  padding: 2rem;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
@@ -137,17 +138,14 @@ section {
 }
 
 footer {
-  padding: 3rem 5rem;
-  display: none;
+  padding: 3rem 1rem;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 1.5rem;
 }
 
 footer p {
   color: #667085;
-  text-align: center;
 }
 
 footer img {
@@ -167,14 +165,10 @@ footer img {
     display: none;
   }
 
-  .other-links {
-    display: flex;
-  }
-
   footer {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    padding: 3rem 5rem;
   }
 }
