@@ -1,5 +1,6 @@
 import slackIcon from "../assets/slack.svg";
 import githubIcon from "../assets/github.svg";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   const linkData = [
@@ -41,6 +42,10 @@ const Main = () => {
           {text}
         </a>
       ))}
+
+      <Link to="/contact" className="btn" id="contact">
+        Contact
+      </Link>
 
       <div className="other-links">
         <a href="http://" target="_blank">
