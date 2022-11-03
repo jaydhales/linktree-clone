@@ -4,7 +4,7 @@ import dots from "../assets/dots.svg";
 import share from "../assets/share.svg";
 import { useState } from "react";
 
-const Header = () => {
+const Profile = () => {
   const [isMore, setIsMore] = useState(false);
   return (
     <header>
@@ -37,4 +37,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Profile;
