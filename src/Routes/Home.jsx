@@ -1,10 +1,10 @@
 import Profile from "../Components/Profile";
 import Main from "../Components/Main";
 
-const Home = () => {
+const Home = ({ name }) => {
   return (
     <div className="App">
-      <Profile />
+      <Profile name={name} />
       <Main />
     </div>
   );
