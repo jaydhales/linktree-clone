@@ -20,7 +20,6 @@ const formLogic = () => {
     if (Object.entries(errors).length === 0 && isSubmitting) {
       setIsSubmitting(false);
       window.scrollTo(0, 0);
-
       setHasSubmitted(true);
       setContactData(initialData);
       setHasUserAgreed(false);
@@ -40,7 +39,7 @@ const formLogic = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    window.scrollTo(0, 150);
     setErrors(validateData(contactData));
     setIsSubmitting(true);
   };

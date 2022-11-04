@@ -21,7 +21,7 @@ const Contact = ({ name }) => {
 
       <div className="name-section">
         <div className="form-group">
-          <label for="first_name" className="input-label">
+          <label htmlFor="first_name" className="input-label">
             First name
           </label>
           <input
@@ -39,7 +39,7 @@ const Contact = ({ name }) => {
         </div>
 
         <div className="form-group">
-          <label for="last_name" className="input-label">
+          <label htmlFor="last_name" className="input-label">
             Last name
           </label>
           <input
@@ -57,7 +57,7 @@ const Contact = ({ name }) => {
       </div>
 
       <div className="form-group">
-        <label for="email" className="input-label">
+        <label htmlFor="email" className="input-label">
           Email
         </label>
         <input
@@ -72,7 +72,7 @@ const Contact = ({ name }) => {
       </div>
 
       <div className="form-group">
-        <label for="message" className="input-label">
+        <label htmlFor="message" className="input-label">
           Message
         </label>
         <textarea
@@ -93,7 +93,7 @@ const Contact = ({ name }) => {
           checked={hasUserAgreed}
           onChange={(e) => setHasUserAgreed(e.target.checked)}
         />
-        <label for="agree">
+        <label htmlFor="agree">
           You agree to providing your data to {name} who may contact you.
         </label>
       </div>
