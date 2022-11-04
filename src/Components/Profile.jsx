@@ -4,7 +4,7 @@ import dots from "../assets/dots.svg";
 import share from "../assets/share.svg";
 import { useState } from "react";
 
-const Header = () => {
+const Profile = ({name}) => {
   const [isMore, setIsMore] = useState(false);
   return (
     <header>
@@ -15,7 +15,7 @@ const Header = () => {
 
       <h3 id="twitter">James_O</h3>
       <p id="slack" className="hidden">
-        james-o
+        {name}
       </p>
 
       <div className="more">
@@ -37,4 +37,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Profile;
