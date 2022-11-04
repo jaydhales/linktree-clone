@@ -60,6 +60,10 @@ p.success {
   padding-left: 30px;
 }
 
+.form-check label {
+  cursor: pointer;
+}
+
 #agree {
   opacity: 0;
   height: 0;
@@ -69,20 +73,18 @@ p.success {
 .check-mark {
   position: absolute;
   left: 4px;
-  top: 5px;
+  top: 7px;
   display: none;
-  cursor: pointer;
 }
 
 .check-box {
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
   width: 20px;
   height: 20px;
   border: 1px solid #d0d5dd;
   border-radius: 6px;
-  cursor: pointer;
 }
 
 .check-box:hover,
