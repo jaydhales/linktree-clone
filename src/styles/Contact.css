@@ -33,6 +33,7 @@ p.success {
 .input {
   width: 100%;
   padding: 10px 14px;
+  margin-top: 5px;
   border: 1px solid #d0d5dd;
   border-radius: 8px;
   transition: all ease 0.5s;
@@ -52,7 +53,6 @@ p.success {
   color: black;
   font-size: 14px;
   font-weight: 500;
-  padding: 6px 0;
 }
 
 .form-check {
