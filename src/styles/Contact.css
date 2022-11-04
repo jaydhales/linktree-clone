@@ -20,6 +20,16 @@ p.is-danger {
   color: #f83f23;
 }
 
+p.success {
+  box-shadow: 0 0 5px rgba(74, 255, 2);
+  width: max-content;
+  padding: 5px 1rem;
+  border-radius: 0.5rem;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .input {
   width: 100%;
   padding: 10px 14px;

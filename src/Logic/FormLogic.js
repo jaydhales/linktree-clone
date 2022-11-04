@@ -1,19 +1,39 @@
+import { useEffect } from "react";
 import { useState } from "react";
 
 const formLogic = () => {
-  const [contactData, setContactData] = useState({
+  const initialData = {
     firstName: "",
     lastName: "",
     email: "",
     message: "",
-  });
+  };
+  const [contactData, setContactData] = useState(initialData);
 
   const [errors, setErrors] = useState({});
 
   const [hasUserAgreed, setHasUserAgreed] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (Object.entries(errors).length === 0 && isSubmitting) {
+      setIsSubmitting(false);
+
+      setHasSubmitted(true);
+      setContactData(initialData);
+      setHasUserAgreed(false);
+
+      setTimeout(() => {
+        setHasSubmitted(false);
+      }, 3000);
+    }
+  }, [errors]);
 
   const handleChange = (e, key) => {
     setErrors({});
+    setHasSubmitted(false);
+    setIsSubmitting(false);
     setContactData({ ...contactData, [key]: e.target.value });
   };
 
@@ -21,6 +41,7 @@ const formLogic = () => {
     e.preventDefault();
 
     setErrors(validateData(contactData));
+    setIsSubmitting(true);
   };
 
   const validateData = (values) => {
@@ -53,6 +74,7 @@ const formLogic = () => {
     handleSubmit,
     hasUserAgreed,
     setHasUserAgreed,
+    hasSubmitted,
   };
 };
 

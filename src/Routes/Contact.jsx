@@ -10,12 +10,15 @@ const Contact = ({ name }) => {
     handleSubmit,
     hasUserAgreed,
     setHasUserAgreed,
+    hasSubmitted,
   } = formLogic();
 
   return (
     <form onSubmit={(e) => handleSubmit(e)} noValidate>
       <h2>Contact Me</h2>
       <p>Hi there, contact me to ask me about anything you have in mind.</p>
+
+      {hasSubmitted && <p className="success">Submitted successfully ✅</p>}
 
       <div className="name-section">
         <div className="form-group">
@@ -81,6 +84,7 @@ const Contact = ({ name }) => {
           type="checkbox"
           name="agree"
           id="agree"
+          checked={hasUserAgreed}
           onChange={(e) => setHasUserAgreed(e.target.checked)}
         />
         <p>You agree to providing your data to {name} who may contact you.</p>
