@@ -1,48 +1,16 @@
 import { useState } from "react";
+import formLogic from "../Logic/FormLogic";
 import "../styles/Contact.css";
 
 const Contact = ({ name }) => {
-  const [contactData, setContactData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    message: "",
-  });
-  const [errors, setErrors] = useState({});
-
-  const [hasUserAgreed, setHasUserAgreed] = useState(false);
-
-  const handleChange = (e, key) => {
-    setErrors({});
-    setContactData({ ...contactData, [key]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    setErrors(validate(contactData));
-  };
-
-  const validate = (values) => {
-    let errors = {};
-    for (const key in values) {
-      if (!values[key]) {
-        switch (key) {
-          case "message":
-            errors[key] = `Please enter a message`;
-            break;
-          default:
-            errors[key] = `Please enter your ${key}`;
-            break;
-        }
-      }
-
-      if (values.email && !/\S+@\S+\.\S+/.test(values.email)) {
-        errors.email = "Email address is invalid";
-      }
-    }
-    return errors;
-  };
+  const {
+    contactData,
+    errors,
+    handleChange,
+    handleSubmit,
+    hasUserAgreed,
+    setHasUserAgreed,
+  } = formLogic();
 
   return (
     <form onSubmit={(e) => handleSubmit(e)} noValidate>
