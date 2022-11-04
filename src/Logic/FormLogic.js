@@ -22,8 +22,6 @@ const formLogic = () => {
       window.scrollTo(0, 0);
       setHasSubmitted(true);
       setContactData(initialData);
-      setHasUserAgreed(false);
-
       setTimeout(() => {
         setHasSubmitted(false);
       }, 3000);
@@ -42,6 +40,7 @@ const formLogic = () => {
     window.scrollTo(0, 150);
     setErrors(validateData(contactData));
     setIsSubmitting(true);
+    setHasUserAgreed(false);
   };
 
   const validateData = (values) => {

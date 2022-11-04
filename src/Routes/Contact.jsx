@@ -1,5 +1,6 @@
 import formLogic from "../Logic/FormLogic";
 import "../styles/Contact.css";
+import check from "../assets/check.svg";
 
 const Contact = ({ name }) => {
   const {
@@ -87,13 +88,15 @@ const Contact = ({ name }) => {
       </div>
 
       <div className="form-check">
-        <input
-          type="checkbox"
-          id="agree"
-          checked={hasUserAgreed}
-          onChange={(e) => setHasUserAgreed(e.target.checked)}
-        />
         <label htmlFor="agree">
+          <input
+            type="checkbox"
+            id="agree"
+            checked={hasUserAgreed}
+            onChange={(e) => setHasUserAgreed(e.target.checked)}
+          />
+          <img src={check} alt="checkmark" className="check-mark" />
+          <span className="check-box"></span>
           You agree to providing your data to {name} who may contact you.
         </label>
       </div>
