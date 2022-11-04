@@ -1,4 +1,3 @@
-import { useState } from "react";
 import formLogic from "../Logic/FormLogic";
 import "../styles/Contact.css";
 

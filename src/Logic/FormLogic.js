@@ -19,6 +19,7 @@ const formLogic = () => {
   useEffect(() => {
     if (Object.entries(errors).length === 0 && isSubmitting) {
       setIsSubmitting(false);
+      window.scrollTo(0, 0);
 
       setHasSubmitted(true);
       setContactData(initialData);
