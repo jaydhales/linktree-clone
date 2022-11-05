@@ -104,7 +104,7 @@ const Contact = ({ name }) => {
       <input
         type="submit"
         value="Send message"
-        id="btn_submit"
+        id="btn__submit"
         className="input"
         disabled={!hasUserAgreed}
       />
