@@ -144,8 +144,12 @@ footer p {
   color: #667085;
 }
 
+footer div {
+  max-width: 200px;
+}
+
 footer img {
-  width: 200px;
+  width: 100%;
 }
 
 @media (min-width: 700px) {

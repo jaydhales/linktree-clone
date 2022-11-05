@@ -4,9 +4,14 @@ import zuriLogo from "../assets/zuri.svg";
 const Footer = () => {
   return (
     <footer>
-      <img src={zuriLogo} alt="" />
+      <div>
+        <img src={zuriLogo} alt="" />
+      </div>
+
       <p>HNG Internship 9 Frontend Task</p>
-      <img src={i4gLogo} alt="" />
+      <div>
+        <img src={i4gLogo} alt="" />
+      </div>
     </footer>
   );
 };
