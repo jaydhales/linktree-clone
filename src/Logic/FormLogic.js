@@ -16,6 +16,8 @@ const formLogic = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
 
+
+  // Submit only when errors are clear
   useEffect(() => {
     if (Object.entries(errors).length === 0 && isSubmitting) {
       setIsSubmitting(false);
@@ -57,6 +59,7 @@ const formLogic = () => {
         }
       }
 
+      // regex to check email format
       if (values.email && !/\S+@\S+\.\S+/.test(values.email)) {
         errors.email = "Email address is invalid";
       }
